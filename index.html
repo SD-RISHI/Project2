@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💸 My Expense Tracker</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="toast"></div>
+
+<div class="app-wrapper">
+
+  <header>
+    <div class="logo">💸 <span>Spend</span>Track</div>
+    <button id="darkToggle" onclick="toggleDarkMode()">🌙 Dark</button>
+  </header>
+
+  <!-- Summary -->
+  <div class="summary-bar">
+    <div class="summary-card">
+      <div class="label">Total Spent</div>
+      <div class="amount" id="totalAmount">₹0.00</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">This Month</div>
+      <div class="amount" id="monthAmount">₹0.00</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Entries</div>
+      <div class="amount" id="totalCount">0</div>
+    </div>
+  </div>
+
+  <!-- Add Expense -->
+  <div class="form-card">
+    <h2>➕ Add Expense</h2>
+    <div class="form-grid">
+      <input type="text" id="expTitle" placeholder="Expense title" class="full-width">
+      <input type="number" id="expAmount" placeholder="Amount">
+      <select id="expCategory">
+        <option value="">Category</option>
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Shopping</option>
+        <option>Entertainment</option>
+        <option>Health</option>
+        <option>Bills</option>
+        <option>Other</option>
+      </select>
+      <input type="date" id="expDate" class="full-width">
+    </div>
+    <button class="btn-add" onclick="addExpense()">Add Expense</button>
+  </div>
+
+  <!-- Expense List -->
+  <div class="expense-list" id="expenseList"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
