@@ -3,7 +3,7 @@ SpendTrack (Expense Tracker)
 A responsive expense tracker built using:
   - HTML5
   - CSS3 (Custom Design System)
-  - Vanilla JavaScript
+  - JavaScript
   - LocalStorage API
 
 Features
